@@ -1,0 +1,108 @@
+version: "3"
+services:
+
+  app_laravel:
+    image: app_laravel
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app_laravel
+    volumes:
+      - ./app/code:/var/www/html
+    networks:
+      - rede-app
+    ports:
+      - ${APP_LARAVEL_HTTP_PORT:-8081}:80
+    depends_on:
+      - "app-redis"
+      - "app-mongo"
+    environment:
+      # Apache
+      APACHE_DOCUMENT_ROOT: /var/www/html/public
+
+      APP_ENV: ${APP_ENV}
+
+      # XDebug
+      XDEBUG_CONFIG: remote_host=host.docker.internal remote_autostart=1 remote_handler=dbgp
+
+      BROADCAST_DRIVER: redis
+      CACHE_DRIVER: redis
+      QUEUE_CONNECTION: redis
+      SESSION_DRIVER: redis
+      SESSION_LIFETIME: 120
+      REDIS_CLIENT: predis
+
+      DB_CONNECTION: mongodb
+
+      # Mongo
+      MONGODB_HOST: app-mongo
+      MONGODB_PORT: 27017
+      MONGODB_DATABASE: querido_diario_db
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+
+      # Redis
+      REDIS_HOST: app-redis
+      REDIS_PORT: 6379
+      REDIS_CACHE_DB: 0
+      REDIS_DB: 0
+      REDIS_PREFIX: "CacheApp:"
+      CACHE_PREFIX: "APP:"
+      REDIS_QUEUE: queue_app
+
+      #Laravel
+      APP_NAME: Laravel
+      APP_KEY: "base64:M0JP2H3BuyX24Snb8DgEzPXoMwLo2FNgHt23FXHGw5k="
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+  app-redis:
+    image: redis
+    container_name: app-redis
+    networks:
+      - rede-app
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+  app-mongo:
+    image: mongo:4.2
+    networks:
+      - rede-app
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
+      - ./app-mongodb/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+    environment:
+      MONGO_INITDB_DATABASE: querido_diario_db
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+volumes:
+  # Mongo DB
+  mongodb:
+    driver: local
+
+
+networks:
+  rede-app:
+    external: true
+
