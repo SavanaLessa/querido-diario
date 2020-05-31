@@ -3,3 +3,5 @@
 ./app/code/composer.lock
 
 app/code/composer.lock
+
+.idea/

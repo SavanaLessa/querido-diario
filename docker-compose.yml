@@ -1,12 +1,12 @@
 version: "3"
 services:
 
-  app_laravel:
-    image: app_laravel
+  app-laravel:
+    image: app-laravel
     build:
       context: ./app
       dockerfile: Dockerfile
-    container_name: app_laravel
+    container_name: app-laravel
     volumes:
       - ./app/code:/var/www/html
     networks:
@@ -40,6 +40,12 @@ services:
       MONGODB_DATABASE: querido_diario_db
       MONGODB_USERNAME: ${MONGODB_USERNAME}
       MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+
+      MYSQL_HOST: app-mysql
+      MYSQL_PORT: 3306
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: app#098
+      MYSQL_DATABASE: querido_diario_db
 
       # Redis
       REDIS_HOST: app-redis
@@ -96,9 +102,34 @@ services:
 
     restart: always
 
+  app-mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    networks:
+      - rede-app
+    container_name: app-mysql
+    volumes:
+      - app-mysql-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: app#098
+      MYSQL_DATABASE: app
+
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "10m"
+
+    restart: always
+
+
 volumes:
   # Mongo DB
   mongodb:
+    driver: local
+
+  app-mysql-volume:
     driver: local
 
 
