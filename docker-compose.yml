@@ -113,7 +113,7 @@ services:
       - app-mysql-volume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: app#098
-      MYSQL_DATABASE: app
+      MYSQL_DATABASE: querido_diario_db
 
     logging:
       driver: "json-file"
