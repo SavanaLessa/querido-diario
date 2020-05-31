@@ -32,7 +32,7 @@ services:
       SESSION_LIFETIME: 120
       REDIS_CLIENT: predis
 
-      DB_CONNECTION: mongodb
+      DB_CONNECTION: mysql
 
       # Mongo
       MONGODB_HOST: app-mongo
@@ -41,11 +41,12 @@ services:
       MONGODB_USERNAME: ${MONGODB_USERNAME}
       MONGODB_PASSWORD: ${MONGODB_PASSWORD}
 
-      MYSQL_HOST: app-mysql
-      MYSQL_PORT: 3306
-      MYSQL_USERNAME: root
-      MYSQL_PASSWORD: app#098
-      MYSQL_DATABASE: querido_diario_db
+      #Mysql
+      DB_HOST: app-mysql
+      DB_PORT: 3306
+      DB_USERNAME: root
+      DB_PASSWORD: app#098
+      DB_DATABASE: querido_diario_db
 
       # Redis
       REDIS_HOST: app-redis
@@ -84,6 +85,7 @@ services:
 
   app-mongo:
     image: mongo:4.2
+    container_name: app-mongo
     networks:
       - rede-app
     ports:
