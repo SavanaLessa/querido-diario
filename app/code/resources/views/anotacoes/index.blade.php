@@ -59,9 +59,6 @@
                                 </div>
 
                                 <div class="btn-group">
-                                    <a href="" class="btn btn-sm btn-link fs-14 mr-2">
-                                        <i class="list-icon fs-18 mr-r-5 fa fa-upload" style="margin-top: 5px;"></i> <strong>Importar</strong>
-                                    </a>
                                     <div class="dropdown">
                                         <a href="javascript:void(0)" data-toggle="dropdown" class="btn btn-sm fs-14 fw-semibold btn-link dropdown-toggle headings-color">
                                             <i class="feather feather-more-vertical text-muted fs-18 mr-2"></i> Ações
@@ -113,9 +110,9 @@
                                 @forelse($anotacoes as $anotacao)
                                     <tr>
                                         <td>
-                                            <input name="uuid" class="td_item" value="" nome="" type="checkbox">
+                                            <input name="uuid" class="td_item" value="{{$anotacao->uuid}}" nome="{{$anotacao->titulo}}" type="checkbox">
                                         </td>
-                                        <td><a href="">{{$anotacao->assunto}}</a></td>
+                                        <td><a href="{{route('anotacoes.show', $anotacao->uuid)}}">{{$anotacao->assunto}}</a></td>
                                         <td>{{$anotacao->created_at}}</td>
                                     </tr>
                                 @empty

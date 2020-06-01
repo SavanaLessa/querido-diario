@@ -28,4 +28,9 @@ class AnotacoesService
 
         return $this->anotacoesRepository->store($anotacao);
     }
+
+    public function getAnotacao($uuid){
+
+        return $this->anotacoesRepository->getAnotacao($uuid);
+    }
 }

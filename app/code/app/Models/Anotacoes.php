@@ -16,6 +16,7 @@ class Anotacoes extends Eloquent
         'data_hora',
         'assunto',
         'user_id',
-        'anotacao'
+        'anotacao',
+        'uuid'
     ];
 }

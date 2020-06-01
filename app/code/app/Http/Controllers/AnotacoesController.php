@@ -53,6 +53,15 @@ class AnotacoesController extends Controller
         return view('anotacoes.create');
     }
 
+    public function show($uuid){
+
+        $anotacao = $this->anotacoesService->getAnotacao($uuid);
+
+        return view('anotacoes.show')->with([
+            'anotacaoSelecionada' => $anotacao
+        ]);
+    }
+
     public function store(Request $request){
 
         $retorno =  $this->anotacoesService->store($request->all());

@@ -4,6 +4,7 @@ namespace App\Repository;
 use App\Models\Anotacoes;
 use Carbon\Carbon;
 use Exception;
+use Ramsey\Uuid\Uuid;
 
 class AnotacoesRepository
 {
@@ -30,6 +31,15 @@ class AnotacoesRepository
         return $anotacoes;
     }
 
+    public function getAnotacao($uuid){
+
+        $anotacao = $this->anotacoes->query()
+            ->where('uuid', '=', $uuid)
+            ->first();
+
+        return $anotacao;
+    }
+
     public function store($anotacao){
 
         try {
@@ -38,7 +48,8 @@ class AnotacoesRepository
             $obj->user_id = auth()->user()->id;
             $obj->assunto = $anotacao['assunto'];
             $obj->anotacao = $anotacao['anotacao'];
-            $obj->anotacao = Carbon::now()->format('Y-m-d H:i:s');
+            $obj->data_hora = Carbon::now()->format('Y-m-d H:i:s');
+            $obj->uuid = \Webpatser\Uuid\Uuid::generate(4)->string;
             $obj->save();
 
             return [

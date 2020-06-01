@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function (){
 
     Route::group(['prefix' => 'anotacoes'], function (){
         Route::get('/', 'AnotacoesController@index')->name('anotacoes.index');
+        Route::get('/show/{uuid}', 'AnotacoesController@show')->name('anotacoes.show');
         Route::get('/create', 'AnotacoesController@create')->name('anotacoes.create');
         Route::post('/store', 'AnotacoesController@store')->name('anotacoes.store');
     });
