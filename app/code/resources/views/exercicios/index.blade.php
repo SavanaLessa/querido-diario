@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="" class="btn btn-secondary stop-video">Fechar</a>
+                    <a href="" id="btn-modal-close-video" class="btn btn-secondary stop-video">Fechar</a>
                 </div>
             </div>
         </div>

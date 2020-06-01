@@ -3,8 +3,11 @@ let btn_modal_fast = document.querySelector('#btn-modal-fast');
 let btn_modal_slow = document.querySelector('#btn-modal-slow');
 let btn_slow = document.querySelector('#btn-slow');
 let btn_close_modal = document.querySelector('.close-modal');
+let btn_close_modal_video = document.querySelector('#btn-modal-close-video');
 
-$('a.stop-video').click(function(){
+
+btn_close_modal_video.addEventListener('click', function () {
+    console.log("cliquei");
     $('.video-relax')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
 });
 
