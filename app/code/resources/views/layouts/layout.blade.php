@@ -118,23 +118,15 @@
                             <span class="hide-menu">Anotações</span>
                         </a>
                         <ul class="list-unstyled sub-menu">
-                            <li><a href="{{route('anotacoes.index')}}">Listar anotações</a>
-                            </li>
+                            <li><a href="{{route('anotacoes.create')}}">Criar nova</a></li>
+                            <li><a href="{{route('anotacoes.index')}}">Listar</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-briefcase"></i> <span class="hide-menu">Registros de crise</span></a>
                         <ul class="list-unstyled sub-menu">
-                            <li><a href="../default/app-calender.html">Calender</a>
+                            <li><a href="{{route('registro.crises.create')}}">Criar nova</a>
                             </li>
-                            <li><a href="../default/app-chat.html">Chat</a>
-                            </li>
-                            <li><a href="../default/app-inbox.html">Inbox</a>
-                            </li>
-                            <li><a href="../default/app-contacts.html">Contacts</a>
-                            </li>
-                            <li><a href="../default/app-products.html">Products</a>
-                            </li>
-                            <li><a href="../default/app-blog.html">Blog</a>
+                            <li><a href="{{route('registro.crises.index')}}">Listar</a>
                             </li>
                         </ul>
                     </li>

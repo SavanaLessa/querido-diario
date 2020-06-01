@@ -9,4 +9,13 @@ class RegistroCrises extends Eloquent
     protected $collection = 'registro_crises';
     protected $connection = 'mongodb';
 
+    protected $fillable = [
+        'user_id',
+        'data_hora',
+        'duracao',
+        'sintomas',
+        'assunto',
+        'descricao'
+    ];
+
 }
