@@ -19,6 +19,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/diario.css')}}" rel="stylesheet" type="text/css">
     <!-- Head Libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script data-pace-options='{ "ajax": false, "selectors": [ "img" ]}' src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
@@ -130,26 +131,18 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-user"></i> <span class="hide-menu">Exercícios</span></a>
-                        <ul class="list-unstyled sub-menu">
-                            <li><a href="../default/page-profile.html">Profile</a>
-                            </li>
 
-                            <li class="menu-item-has-children"><a href="javascript:void(0);">Error Pages</a>
-                                <ul class="list-unstyled sub-menu">
-                                    <li><a href="../default/page-error-403.html">Error 403</a>
-                                    </li>
-                                    <li><a href="../default/page-error-404.html">Error 404</a>
-                                    </li>
-                                    <li><a href="../default/page-error-500.html">Error 500</a>
-                                    </li>
-                                    <li><a href="../default/page-error-503.html">Error 503</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li>
+                        <a href="{{route('exercicios.index')}}">
+                            <i class="list-icon feather feather-command"></i>
+                            <span class="hide-menu">Exercícios</span>
+                        </a>
                     </li>
-                    <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-user"></i> <span class="hide-menu">Logout</span></a>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="list-icon feather feather-user"></i>
+                            <span class="hide-menu">Logout</span>
+                        </a>
                     </li>
                 </ul>
                 <!-- /.side-menu -->

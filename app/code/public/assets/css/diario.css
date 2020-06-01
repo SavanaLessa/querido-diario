@@ -1,0 +1,28 @@
+.diario-circle {
+    width: 100px;
+    height: 100px;
+}
+
+.video-relax {
+    width: 100%;
+}
+
+.circulo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s ease;
+}
+
+.secondary {
+    background-color: #adadad;
+}
+
+.contador {
+    vertical-align: middle;
+    margin-top: 30%;
+}
