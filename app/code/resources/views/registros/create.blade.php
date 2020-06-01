@@ -56,10 +56,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="descricao">Descrição</label>
-                                <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="motivos">Motivo</label>
+                                        <input class="form-control" id="motivos" name="motivos" placeholder="Motivo..." type="text">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="descricao">Descrição</label>
+                                        <textarea class="form-control" id="descricao" name="descricao" rows="3"></textarea>
+                                    </div>
+                                </div>
                             </div>
+
                             <div class="form-actions btn-list">
                                 <button class="btn btn-primary" type="submit">Salvar</button>
                                 <a class="btn btn-outline-default" href="{{route('registro.crises.create')}}">Cancelar</a>

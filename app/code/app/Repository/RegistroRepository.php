@@ -44,6 +44,7 @@ class RegistroRepository
             $obj->sintomas = $registro['sintomas'];
             $obj->duracao = $registro['duracao'].'-'.$registro['tempo'];
             $obj->descricao = $registro['descricao'];
+            $obj->motivos = $registro['motivos'];
             $obj->save();
 
             return [

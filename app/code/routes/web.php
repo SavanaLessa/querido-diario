@@ -18,6 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/logout', function (){
+
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
+
 Auth::routes();
 
 Route::middleware('auth')->group(function (){

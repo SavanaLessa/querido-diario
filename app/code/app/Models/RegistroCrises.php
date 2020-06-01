@@ -15,6 +15,7 @@ class RegistroCrises extends Eloquent
         'duracao',
         'sintomas',
         'assunto',
+        'motivos',
         'descricao',
         'uuid'
     ];

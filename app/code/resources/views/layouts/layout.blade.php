@@ -139,7 +139,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:void(0);">
+                        <a href="{{route('logout')}}">
                             <i class="list-icon feather feather-user"></i>
                             <span class="hide-menu">Logout</span>
                         </a>

@@ -103,6 +103,7 @@
                                     </th>
                                     <th>Assunto</th>
                                     <th>Sintomas</th>
+                                    <th>Motivos</th>
                                     <th>Duração</th>
                                     <th>Data</th>
                                 </tr>
@@ -115,6 +116,7 @@
                                         </td>
                                         <td><a href="{{route('registro.crises.show', $registro->uuid)}}">{{$registro->assunto}}</a></td>
                                         <td>{{$registro->sintomas}}</td>
+                                        <td>{{$registro->motivos}}</td>
                                         <td>{{$registro->duracao}}</td>
                                         <td>{{$registro->data_hora}}</td>
                                     </tr>
