@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-    <main class="main-wrapper clearfix">
+
         <!-- Page Title Area -->
         <div class="row page-title clearfix">
             <div class="page-title-left">
@@ -89,7 +89,7 @@
             <!-- /.row -->
         </div>
         <!-- /.widget-list -->
-    </main>
+
 
 
 @endsection

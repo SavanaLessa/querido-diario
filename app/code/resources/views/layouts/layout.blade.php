@@ -11,14 +11,14 @@
     <title>Querido diário</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600%7CRoboto:400" rel="stylesheet" type="text/css">
-    <link href="assets/vendors/material-icons/material-icons.css" rel="stylesheet" type="text/css">
-    <link href="assets/vendors/mono-social-icons/monosocialiconsfont.css" rel="stylesheet" type="text/css">
-    <link href="assets/vendors/feather-icons/feather.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/vendors/material-icons/material-icons.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/vendors/mono-social-icons/monosocialiconsfont.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/vendors/feather-icons/feather.css')}}" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
     <!-- Head Libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script data-pace-options='{ "ajax": false, "selectors": [ "img" ]}' src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
@@ -31,8 +31,8 @@
         <!-- Logo Area -->
         <div class="navbar-header">
             <a href="index.html" class="navbar-brand">
-                <img class="logo-expand" alt="" src="assets/img/logo-dark.png">
-                <img class="logo-collapse" alt="" src="assets/img/logo-collapse.png">
+                <img class="logo-expand" alt="" src="{{asset('assets/img/logo-dark.png')}}">
+                <img class="logo-collapse" alt="" src="{{asset('assets/img/logo-collapse.png')}}">
                 <!-- <p>BonVue</p> -->
             </a>
         </div>
@@ -59,7 +59,7 @@
                         <ul class="card-body list-unstyled dropdown-list-group">
                             <li><a href="#" class="media"><span class="d-flex"><i class="material-icons list-icon">check</i> </span><span class="media-body"><span class="heading-font-family media-heading">Invitation accepted</span> <span class="media-content">Your have been Invited ...</span></span></a>
                             </li>
-                            <li><a href="#" class="media"><span class="d-flex thumb-xs user--online"><img src="assets/demo/users/user3.jpg" class="rounded-circle" alt=""> </span><span class="media-body"><span class="heading-font-family media-heading">Steve Smith</span> <span class="media-content">I slowly updated projects</span></span></a>
+                            <li><a href="#" class="media"><span class="d-flex thumb-xs user--online"><img src="{{asset('assets/demo/users/user3.jpg')}}" class="rounded-circle" alt=""> </span><span class="media-body"><span class="heading-font-family media-heading">Steve Smith</span> <span class="media-content">I slowly updated projects</span></span></a>
                             </li>
                             <li><a href="#" class="media"><span class="d-flex"><i class="material-icons list-icon">event_available</i> </span><span class="media-body"><span class="-heading-font-family media-heading">To Do</span> <span class="media-content">Meeting with Nathan on Friday 8 AM ...</span></span></a>
                             </li>
@@ -90,7 +90,7 @@
                 <div class="col-sm-12 text-center p-0 clearfix">
                     <div class="d-inline-block pos-relative mr-b-10">
                         <figure class="thumb-sm mr-b-0 user--online">
-                            <img src="assets/demo/users/user1.jpg" class="rounded-circle" alt="">
+                            <img src="{{asset('assets/demo/users/user1.jpg')}}" class="rounded-circle" alt="">
                         </figure><a href="page-profile.html" class="text-muted side-user-link"><i class="feather feather-settings list-icon"></i></a>
                     </div>
                     <!-- /.d-inline-block -->
@@ -106,9 +106,19 @@
             <!-- Sidebar Menu -->
             <nav class="sidebar-nav">
                 <ul class="nav in side-menu">
-                    <li class="current-page menu-item-has-children"><a href="index.html"><i class="list-icon feather feather-command"></i> <span class="hide-menu">Anotações</span></a>
+                    <li class="{{ Route::currentRouteName() == 'home' ? 'active ' : ''}}">
+                        <a href="{{route('home')}}">
+                            <i class="list-icon feather feather-command"></i>
+                            <span class="hide-menu">Home</span>
+                        </a>
+                    </li>
+                    <li class="current-page menu-item-has-children">
+                        <a href="{{route('anotacoes.index')}}">
+                            <i class="list-icon feather feather-command"></i>
+                            <span class="hide-menu">Anotações</span>
+                        </a>
                         <ul class="list-unstyled sub-menu">
-                            <li><a href="../default/index.html">Criar nova</a>
+                            <li><a href="{{route('anotacoes.index')}}">Listar anotações</a>
                             </li>
                         </ul>
                     </li>
@@ -155,10 +165,13 @@
             <!-- /.sidebar-nav -->
         </aside>
         <!-- /.site-sidebar -->
-        @yield('content')
+
         <!-- /.main-wrappper -->
     </div>
     <!-- /.content-wrapper -->
+    <main class="main-wrapper clearfix">
+        @yield('content')
+    </main>
     <!-- FOOTER -->
     <footer class="footer"><span class="heading-font-family">Copyright @ 2017. All rights reserved WiseOwl Admin by Unifato</span>
     </footer>
@@ -167,13 +180,13 @@
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.2/umd/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.7.0/metisMenu.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/js/perfect-scrollbar.jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-<script src="assets/js/theme.js"></script>
-<script src="assets/js/custom.js"></script>
+<script src="{{asset('assets/js/theme.js')}}"></script>
+<script src="{{asset('assets/js/custom.js')}}"></script>
 
 </body>
 
