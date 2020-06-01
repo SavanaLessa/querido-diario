@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function (){
     Route::group(['prefix' => 'registroCrises'], function (){
         Route::get('/', 'RegistroCriseController@index')->name('registro.crises.index');
         Route::get('/create', 'RegistroCriseController@create')->name('registro.crises.create');
-        Route::get('/show', 'RegistroCriseController@show')->name('registro.crises.show');
+        Route::get('/show/{uuid}', 'RegistroCriseController@show')->name('registro.crises.show');
         Route::post('/store', 'RegistroCriseController@store')->name('registro.crises.store');
     });
 

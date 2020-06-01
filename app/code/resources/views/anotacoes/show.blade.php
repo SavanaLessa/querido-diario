@@ -51,7 +51,7 @@
 
                             </div>
                             <div class="form-actions btn-list">
-                                <a class="btn btn-outline-default" href="{{route('anotacoes.index')}}">Fechar</a>
+                                <a class="btn btn-outline-default" href="{{route('anotacoes.index')}}">Voltar</a>
                             </div>
                         </form>
                     </div>

@@ -34,4 +34,24 @@ class RegistroCriseController extends Controller
 
         return view('registros.create');
     }
+
+    public function store(Request $request){
+
+        $retorno = $this->registroService->store($request->all());
+
+        if(!isset($retorno['error'])){
+            return redirect()->route('registro.crises.index')->with('success', 'Registro cadastrado com sucesso.');
+        }else{
+            return redirect()->route('registro.crises.index')->with('error', $retorno['msg']);
+        }
+    }
+
+    public function show($uuid){
+
+        $registro = $this->registroService->show($uuid);
+
+        return view('registros.show')->with([
+            'registroSelecionado' => $registro
+        ]);
+    }
 }
