@@ -26,3 +26,15 @@
     vertical-align: middle;
     margin-top: 30%;
 }
+
+.main-wrapper {
+    background-color: #add8e6;
+}
+
+.footer {
+    background-color: lightblue;
+}
+
+.form-control:disabled {
+    color: rgba(116, 112, 141, 0.88);
+}
