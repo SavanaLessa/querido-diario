@@ -9,38 +9,53 @@
     <!-- /.navbar-header -->
     <h5><a href="javascript:void(0);">Registre-se</a></h5>
     <p>Para se registrar, é necessário preencher o formulário abaixo e ter um e-mail válido!.</p>
-    <form id="loginform" action="{{route('register')}}">
+    <form method="POST" action="{{ route('register') }}">
         @csrf
-        @method('POST')
-        <div class="form-group">
-            <label>Nome</label>
-            <input class="form-control" type="text" required="" placeholder="Nome">
+
+        <div class="form-group row">
+            <label for="name">{{ __('Nome') }}</label>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+            @error('name')
+            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+            @enderror
         </div>
-        <div class="form-group">
-            <label>Email</label>
-            <input class="form-control" type="text" required="" placeholder="Email">
+
+        <div class="form-group row">
+            <label for="email">{{ __('E-Mail') }}</label>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+            @enderror
         </div>
-        <div class="form-group">
-            <label>Senha</label>
-            <input class="form-control" type="password" required="" placeholder="Senha">
+
+        <div class="form-group row">
+            <label for="password">{{ __('Senha') }}</label>
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+            @enderror
         </div>
-        <div class="form-group">
-            <label>Confirme sua senha</label>
-            <input class="form-control" type="password" required="required" placeholder="Confirme sua senha">
+
+        <div class="form-group row">
+            <label for="password-confirm">{{ __('Confirme sua senha') }}</label>
+            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+
         </div>
-        <div class="form-group no-gutters mb-3">
-            <div class="checkbox checkbox-primary">
-                <label>
-                    <input type="checkbox" required="required"> <span class="label-text">Eu aceito todos os termos e <a href="#">Terms &amp; Conddições</a></span>
-                </label>
-            </div>
-            <!-- /.checkbox -->
-        </div>
-        <!-- /.form-group -->
+
         <div class="form-group text-center no-gutters mb-4">
-            <button class="btn btn-block btn-lg btn-primary text-uppercase fs-12 fw-600" type="submit">Registre-se</button>
+            <button type="submit" class="btn btn-primary">
+                {{ __('Registre-se') }}
+            </button>
         </div>
-        <!-- /.btn-list -->
     </form>
     <!-- /.form-horzontal -->
     <footer class="col-sm-12 text-center">
