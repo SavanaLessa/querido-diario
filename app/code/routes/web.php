@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,37 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/logout', function (){
+
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
+
+Auth::routes();
+
+Route::middleware('auth')->group(function (){
+
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::group(['prefix' => 'anotacoes'], function (){
+        Route::get('/', 'AnotacoesController@index')->name('anotacoes.index');
+        Route::get('/show/{uuid}', 'AnotacoesController@show')->name('anotacoes.show');
+        Route::get('/create', 'AnotacoesController@create')->name('anotacoes.create');
+        Route::post('/store', 'AnotacoesController@store')->name('anotacoes.store');
+    });
+
+    Route::group(['prefix' => 'exercicios'], function (){
+        Route::get('/', 'ExerciciosController@index')->name('exercicios.index');
+    });
+
+    Route::group(['prefix' => 'registroCrises'], function (){
+        Route::get('/', 'RegistroCriseController@index')->name('registro.crises.index');
+        Route::get('/create', 'RegistroCriseController@create')->name('registro.crises.create');
+        Route::get('/show/{uuid}', 'RegistroCriseController@show')->name('registro.crises.show');
+        Route::post('/store', 'RegistroCriseController@store')->name('registro.crises.store');
+    });
+
+});
+
+

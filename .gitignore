@@ -1,2 +1,7 @@
 ./app/code/.env
 .env
+./app/code/composer.lock
+
+app/code/composer.lock
+
+.idea/

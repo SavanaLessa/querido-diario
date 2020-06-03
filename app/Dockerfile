@@ -6,8 +6,12 @@ RUN curl -sS https://getcomposer.org/installer -o composer-setup.php && \
 
 RUN apt-get update && apt-get upgrade -y && apt-get install --yes zip unzip
 
+#instala as extensões do mongo
 RUN pecl install mongodb && \
 docker-php-ext-enable mongodb
+
+# Instala as extensões do mysql e mysqli
+RUN docker-php-ext-install pdo_mysql mysqli
 
 # Instala as extensoes do php
 RUN apt-get update && \
