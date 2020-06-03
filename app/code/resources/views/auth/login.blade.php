@@ -28,9 +28,10 @@
                             <input type="checkbox"> <span class="label-text">Lembrar-me</span>
                         </label>
                     </div>
-                    @if (Route::has('password.request'))
+
+                    <!--@if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}" id="to-recover" class="my-auto pb-2 text-right"><i class="material-icons mr-2 fs-18">lock</i> Esqueceu sua senha?</a>
-                    @endif
+                    @endif-->
                 </div>
                 <!-- /.col-md-12 -->
             </div>
