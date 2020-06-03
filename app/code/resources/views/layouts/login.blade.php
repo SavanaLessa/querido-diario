@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
-<body class="body-bg-full profile-page" style="background-image: url(assets/img/Imagens.2.png)">
+<body class="body-bg-full profile-page" style="background-image: url(assets/img/abstract-spring-nature.jpg)">
 <div id="wrapper" class="row wrapper">
     <div class="container-min-full-height d-flex justify-content-center align-items-center">
         @yield('content')

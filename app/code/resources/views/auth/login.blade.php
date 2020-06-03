@@ -12,11 +12,11 @@
             @csrf
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" placeholder="emails@example.com" class="form-control form-control-line" name="email" id="email">
+                <input type="email" placeholder="example@email.com" class="form-control form-control-line" name="email" id="email">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" placeholder="password" id="password" name="password" class="form-control form-control-line">
+                <label for="password">Senha</label>
+                <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line">
             </div>
             <div class="form-group">
                 <button class="btn btn-block btn-lg btn-primary text-uppercase fs-12 fw-600" type="submit">Login</button>

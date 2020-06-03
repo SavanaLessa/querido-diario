@@ -21,7 +21,7 @@
     <link href="{{asset('assets/css/diario.css')}}" rel="stylesheet" type="text/css">
 </head>
 
-<body class="body-bg-full profile-page" style="background-image: url(assets/img/Imagens.2.png)">
+<body class="body-bg-full profile-page" style="background-image: url(assets/img/abstract-spring-nature.jpg)">
 <div id="wrapper" class="row wrapper">
     <div class="col-10 ml-sm-auto col-sm-8 col-md-4 ml-md-auto login-center mx-auto">
         @yield('content')

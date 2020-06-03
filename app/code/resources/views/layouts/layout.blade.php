@@ -109,13 +109,13 @@
                 <ul class="nav in side-menu">
                     <li class="{{ Route::currentRouteName() == 'home' ? 'active ' : ''}}">
                         <a href="{{route('home')}}">
-                            <i class="list-icon feather feather-command"></i>
+                            <i class="list-icon feather feather-home"></i>
                             <span class="hide-menu">Home</span>
                         </a>
                     </li>
                     <li class="current-page menu-item-has-children">
                         <a href="{{route('anotacoes.index')}}">
-                            <i class="list-icon feather feather-command"></i>
+                            <i class="list-icon feather feather-paperclip"></i>
                             <span class="hide-menu">Anotações</span>
                         </a>
                         <ul class="list-unstyled sub-menu">
@@ -123,7 +123,7 @@
                             <li><a href="{{route('anotacoes.index')}}">Listar</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-briefcase"></i> <span class="hide-menu">Registros de crise</span></a>
+                    <li class="menu-item-has-children"><a href="javascript:void(0);"><i class="list-icon feather feather-file-plus"></i> <span class="hide-menu">Registros de crise</span></a>
                         <ul class="list-unstyled sub-menu">
                             <li><a href="{{route('registro.crises.create')}}">Criar nova</a>
                             </li>
@@ -134,13 +134,13 @@
 
                     <li>
                         <a href="{{route('exercicios.index')}}">
-                            <i class="list-icon feather feather-command"></i>
+                            <i class="list-icon feather feather-activity"></i>
                             <span class="hide-menu">Exercícios</span>
                         </a>
                     </li>
                     <li>
                         <a href="{{route('logout')}}">
-                            <i class="list-icon feather feather-user"></i>
+                            <i class="list-icon feather feather-log-out"></i>
                             <span class="hide-menu">Logout</span>
                         </a>
                     </li>
