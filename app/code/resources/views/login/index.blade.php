@@ -4,7 +4,7 @@
     <div class="login-center">
         <div class="navbar-header text-center mt-2 mb-4">
             <a href="index.html">
-                <img alt="" src="assets/img/logo-light.png">
+                <img alt="" src="assets/img/Imagens.png">
             </a>
         </div>
         <!-- /.navbar-header -->

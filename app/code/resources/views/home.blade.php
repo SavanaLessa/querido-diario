@@ -24,16 +24,18 @@
         <div class="widget-list">
             <div class="row">
                 <div class="col-md-12 widget-holder">
-                    <div class="widget-bg">
+                    <div class="widget-bg carousel-diario">
                         <div class="widget-body clearfix">
                             <div class="carousel" data-slick='{"slidesToShow":1, "autoplay": true, "infinite": true, "speed": 2000, "fade": true, "dots": true, "infinite": true }'>
                                 <div>
                                     <img src="assets/demo/carousel/carousel-10.jpeg" alt="">
                                     <div class="carousel-caption single-item-caption d-none d-sm-block">
                                         <div class="single-item-caption-inside">
-                                            <h6>Inspiration and Design</h6>
-                                            <h3>A Piece of Green</h3>
-                                            <p class="text-muted">Posted: May 14, 2017</p><a href="#" class="btn btn-outline-info btn-rounded">View Post</a>
+                                            <div class="mensagem-text">
+                                                <h1 class="mensagem-text">Sua depressão não é preguiça. Sua ansiedade não é frescura. Você é forte e sobreviveu a todos os momentos ruins. E apesar de enfrentar tudo isso, você ainda vai fazer grandes coisas.</h1>
+                                                <h5 class="mensagem-text">@ansiedade.não</h5>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -41,9 +43,10 @@
                                     <img src="assets/demo/carousel/carousel-11.jpeg" alt="">
                                     <div class="carousel-caption single-item-caption d-none d-sm-block">
                                         <div class="single-item-caption-inside">
-                                            <h6>LifeStyle</h6>
-                                            <h3>Balanced</h3>
-                                            <p class="text-muted">Posted: May 14, 2017</p><a href="#" class="btn btn-outline-info btn-rounded">View Post</a>
+                                            <div class="mensagem-text">
+                                                <h1 class="mensagem-text">Um dia, quando olhares para trás, verás que os dias mais belos foram aqueles em que lutaste.</h1>
+                                                <h5 class="mensagem-text">Sigmund Freud</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,9 +54,11 @@
                                     <img src="assets/demo/carousel/carousel-12.jpeg" alt="">
                                     <div class="carousel-caption single-item-caption d-none d-sm-block">
                                         <div class="single-item-caption-inside">
-                                            <h6>Travel</h6>
-                                            <h3>A Trip to Unknown</h3>
-                                            <p class="text-muted">Posted: May 14, 2017</p><a href="#" class="btn btn-outline-info btn-rounded">View Post</a>
+                                            <div class="mensagem-text">
+                                                <h1 class="mensagem-text">Entre o caminho da razão e o do coração, escolha o caminho do meio, o caminho do equilíbrio.</h1>
+                                                <h5 class="mensagem-text">Eduardo Shinyashiki</h5>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -61,9 +66,10 @@
                                     <img src="assets/demo/carousel/carousel-13.jpeg" alt="">
                                     <div class="carousel-caption single-item-caption d-none d-sm-block">
                                         <div class="single-item-caption-inside">
-                                            <h6>Inspiration and Design</h6>
-                                            <h3>A Piece of Green</h3>
-                                            <p class="text-muted">Posted: May 14, 2017</p><a href="#" class="btn btn-outline-info btn-rounded">View Post</a>
+                                            <div class="mensagem-text">
+                                                <h1 class="mensagem-text">Você está evoluindo, acredite em si mesmo. Apesar dos dias parecerem tempestades sem fim, você é forte. Você conseguirá!</h1>
+                                                <h5 class="mensagem-text">Belas mensagens</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -71,9 +77,11 @@
                                     <img src="assets/demo/carousel/carousel-14.jpeg" alt="">
                                     <div class="carousel-caption single-item-caption d-none d-sm-block">
                                         <div class="single-item-caption-inside">
-                                            <h6>Lifestyle</h6>
-                                            <h3>Whatever it takes.</h3>
-                                            <p class="text-muted">Posted: May 14, 2017</p><a href="#" class="btn btn-outline-info btn-rounded">View Post</a>
+                                            <div class="mensagem-text">
+                                                <h1 class="mensagem-text">Um pensamento positivo pela manhã, pode mudar todo o seu dia!</h1>
+                                                <h5 class="mensagem-text">Fitebelablog</h5>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

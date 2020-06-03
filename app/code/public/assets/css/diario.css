@@ -38,3 +38,29 @@
 .form-control:disabled {
     color: rgba(116, 112, 141, 0.88);
 }
+
+.carousel.slick-slider .single-item-caption {
+    background: transparent;
+    color: #ffffff;
+}
+
+.carousel.slick-slider .single-item-caption .single-item-caption-inside {
+    border: none;
+}
+
+.single-item-caption-inside {
+    color: red;
+}
+
+.mensagem-text {
+    color: #ffffff;
+    text-shadow: black 0.1em 0.1em 0.2em}
+}
+
+.carousel-diario {
+    background-color: transparent;
+}
+
+.logo-expand {
+    width: 150px;
+}

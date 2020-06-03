@@ -30,7 +30,7 @@
                                     <img class="card-img-top " src="{{asset('assets/img/Perder-Peso.png')}}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Respiração Rápida</h5>
-                                        <p class="card-text">Um simples exercício de respiração, capaz de acalmar até uma leoa menstruada!.</p>
+                                        <p class="card-text">Um rápido exercício de respiração, para lhe deixar relaxado e calmo.</p>
                                         <a href="#" id="btn-modal-fast" class="btn btn-primary" data-toggle="modal" data-target="#modal-fast">Vamos lá?</a>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                                     <img class="card-img-top " src="{{asset('assets/img/woman-meditation.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Respiração Profunda</h5>
-                                        <p class="card-text">Um simples exercício de respiração, capaz de acalmar até uma leoa menstruada!.</p>
+                                        <p class="card-text">Um exercício de respiração profunda, para lhe deixar relaxado e calmo.</p>
                                         <a href="#" id="btn-modal-slow" class="btn btn-primary" data-toggle="modal" data-target="#modal-slow">Vamos lá?</a>
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@
                                     <img class="card-img-top" width="100%" src="{{asset('assets/img/men-meditation.jpg')}}" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Vídeo Relaxante</h5>
-                                        <p class="card-text">Um simples exercício de respiração, capaz de acalmar até uma leoa menstruada!.</p>
+                                        <p class="card-text">Assista a um vídeo com sons e imagens relaxantes...</p>
                                         <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal-video">Vamos lá?</a>
                                     </div>
                                 </div>

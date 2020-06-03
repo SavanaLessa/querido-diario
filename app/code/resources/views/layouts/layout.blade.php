@@ -32,7 +32,7 @@
         <!-- Logo Area -->
         <div class="navbar-header">
             <a href="index.html" class="navbar-brand">
-                <img class="logo-expand" alt="" src="{{asset('assets/img/logo-dark.png')}}">
+                <img class="logo-expand" alt="" src="{{asset('assets/img/Imagens.png')}}">
                 <img class="logo-collapse" alt="" src="{{asset('assets/img/logo-collapse.png')}}">
                 <!-- <p>BonVue</p> -->
             </a>
