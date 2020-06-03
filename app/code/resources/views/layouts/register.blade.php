@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/demo/favicon.png">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Login</title>
+    <title>Registre-se</title>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600%7CRoboto:400" rel="stylesheet" type="text/css">
     <link href="assets/vendors/material-icons/material-icons.css" rel="stylesheet" type="text/css">
@@ -18,15 +18,15 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- Head Libs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="{{asset('assets/css/diario.css')}}" rel="stylesheet" type="text/css">
 </head>
 
 <body class="body-bg-full profile-page" style="background-image: url(assets/img/Imagens.2.png)">
 <div id="wrapper" class="row wrapper">
-    <div class="container-min-full-height d-flex justify-content-center align-items-center">
+    <div class="col-10 ml-sm-auto col-sm-8 col-md-4 ml-md-auto login-center mx-auto">
         @yield('content')
-        <!-- /.login-center -->
     </div>
-    <!-- /.d-flex -->
+    <!-- /.login-center -->
 </div>
 <!-- /.body-container -->
 <!-- Scripts -->
