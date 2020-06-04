@@ -12,20 +12,20 @@
             @csrf
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" placeholder="example@email.com" class="form-control form-control-line" name="email" id="email">
+                <input type="email" placeholder="example@email.com" class="form-control form-control-line @error('email') is-invalid @enderror" name="email" id="email">
                 @error('email')
                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                    <strong>{{ $message }}</strong>
+                </span>
                 @enderror
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line">
+                <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line @error('password') is-invalid @enderror">
                 @error('password')
                 <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                    <strong>{{ $message }}</strong>
+                </span>
                 @enderror
             </div>
             <div class="form-group">
