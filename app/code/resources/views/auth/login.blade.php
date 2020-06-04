@@ -12,11 +12,21 @@
             @csrf
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" placeholder="example@email.com" class="form-control form-control-line" name="email" id="email">
+                <input type="email" placeholder="example@email.com" class="form-control form-control-line @error('email') is-invalid @enderror" name="email" id="email">
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line">
+                <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line @error('password') is-invalid @enderror">
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
             </div>
             <div class="form-group">
                 <button class="btn btn-block btn-lg btn-primary text-uppercase fs-12 fw-600" type="submit">Login</button>
@@ -29,8 +39,8 @@
                         </label>
                     </div>
 
-                    <!--@if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" id="to-recover" class="my-auto pb-2 text-right"><i class="material-icons mr-2 fs-18">lock</i> Esqueceu sua senha?</a>
+                <!--@if (Route::has('password.request'))
+                    <a href="{{ route('password.request') }}" id="to-recover" class="my-auto pb-2 text-right"><i class="material-icons mr-2 fs-18">lock</i> Esqueceu sua senha?</a>
                     @endif-->
                 </div>
                 <!-- /.col-md-12 -->
