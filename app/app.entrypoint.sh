@@ -17,6 +17,7 @@ chgrp -R www-data bootstrap/cache
 
 # Torna a pasta storage publica
 php artisan storage:link
+php artisan migrate:fresh --seed
 
 apt-get -y install iputils-ping
 
