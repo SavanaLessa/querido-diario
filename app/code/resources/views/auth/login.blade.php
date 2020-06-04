@@ -13,10 +13,20 @@
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" placeholder="example@email.com" class="form-control form-control-line" name="email" id="email">
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
                 <input type="password" placeholder="senha" id="password" name="password" class="form-control form-control-line">
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
             </div>
             <div class="form-group">
                 <button class="btn btn-block btn-lg btn-primary text-uppercase fs-12 fw-600" type="submit">Login</button>
