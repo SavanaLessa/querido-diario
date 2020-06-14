@@ -40,22 +40,13 @@
                                         <input disabled="disabled" class="form-control" id="sintomas" value="{{$registroSelecionado->sintomas}}" name="sintomas" placeholder="Sintomas..." type="text">
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="duracao">Duração</label>
-                                        <input disabled="disabled" class="form-control" id="duracao" {{$registroSelecionado->duracao}} name="duracao" placeholder="Duração..." type="text">
+                                        <input disabled="disabled" class="form-control" id="duracao" value="{{$registroSelecionado->duracao}}" name="duracao" placeholder="Duração..." type="text">
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="tempo">Tempo</label>
-                                        <select name="tempo" id="tempo" class="form-control select2" required="required" disabled="disabled">
-                                            <option value="">Selecione</option>
-                                            <option value="minutos">Minutos</option>
-                                            <option value="horas">Horas</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="form-group">
                                 <label for="descricao">Descrição</label>

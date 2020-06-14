@@ -56,40 +56,9 @@
                                     <div class="d-none d-sm-block text-right mr-r-20">
                                         <a href="{{route('registro.crises.create')}}" class="btn btn-primary btn-sm fs-14">Adicionar registro</a>
                                     </div>
-
-                                    <div class="btn-group">
-                                        <div class="dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="btn btn-sm fs-14 fw-semibold btn-link dropdown-toggle headings-color">
-                                                <i class="feather feather-more-vertical text-muted fs-18 mr-2"></i> Ações
-                                            </a>
-                                            <div role="menu" class="dropdown-menu">
-                                                <a class="dropdown-item" href="javascript:void(0)">Exportar para PDF</a>
-                                                <a class="dropdown-item" href="javascript:void(0)">Exportar para CSV</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item text-red" rel="excluirClientes"  href="javascript:void(0)">Remover</a>
-                                            </div>
-                                        </div>
-                                        <!-- /.dropdown -->
-                                    </div>
                                     <!-- /.btn-group -->
                                 </div>
                                 <!-- /.mail-inbox-tools -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="col-md-8 d-inline-block text-right">
-                                    <form action="" method="get">
-                                        {{ csrf_field() }}
-
-                                        <div class="form-group" style="margin-bottom: 0px;">
-                                            <div class="input-group input-group-sm">
-                                                <input class="form-control fs-14 input_busca" id="l8" name="busca" placeholder="Buscar registros..." type="text">
-                                                <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-primary fs-14">Buscar</button>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
                             </div>
                         </div>
 
